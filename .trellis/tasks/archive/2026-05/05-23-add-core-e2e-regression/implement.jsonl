@@ -1,8 +1,0 @@
-{"file": ".trellis/spec/frontend/index.md", "reason": "Core product terms and current surfaces for E2E assertions."}
-{"file": ".trellis/spec/frontend/component-guidelines.md", "reason": "Accessible component and selector expectations for browser tests."}
-{"file": ".trellis/spec/frontend/quality-guidelines.md", "reason": "Frontend test and UI quality expectations."}
-{"file": ".trellis/spec/frontend/state-management.md", "reason": "Frequency/session state flow affects E2E setup."}
-{"file": ".trellis/spec/frontend/type-safety.md", "reason": "Type-safe test helpers and API response handling."}
-{"file": ".trellis/spec/backend/index.md", "reason": "Backend API availability for cross-layer E2E."}
-{"file": ".trellis/spec/backend/api-contracts.md", "reason": "API envelope and route contract expectations if tests mock or call API."}
-{"file": ".trellis/spec/guides/cross-layer-thinking-guide.md", "reason": "Task spans browser, Web server, API, and test runtime."}
