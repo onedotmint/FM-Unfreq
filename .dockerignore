@@ -1,0 +1,17 @@
+.git
+.next
+.trellis
+.agents
+.codex
+node_modules
+apps/*/node_modules
+apps/*/.next
+apps/*/dist
+apps/*/.tsbuildcache
+coverage
+*.tsbuildinfo
+.env
+.env.*
+!*.env.example
+!deploy/*.env.example
+npm-debug.log*
