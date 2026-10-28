@@ -30,6 +30,20 @@ Dockerfile.api  API 镜像
 Dockerfile.web  Web 镜像
 ```
 
+## GitHub Actions CI
+
+工作流位于 [`.github/workflows/ci.yml`](../.github/workflows/ci.yml)，在 PR、推送到 `main` 或手动触发时运行。三个任务独立并行，一个失败不会取消其他任务：
+
+| 任务 | 检查内容 |
+| --- | --- |
+| `api checks` | `npm run api:check`：lint、contracts/API 类型检查、API 单元测试、构建 |
+| `web checks` | `npm run web:check` 加 Web 单元测试：lint、contracts/Web 类型检查、构建、测试 |
+| `Deployment script tests` | `sh scripts/test-deployment-scripts.sh`，与 `npm run deploy:test` 相同 |
+
+API/Web 使用与 Docker 镜像一致的 Node.js 22，通过 `npm ci` 按锁文件安装依赖并缓存 npm 下载。同一 PR/分支的新运行会取消旧运行。
+
+这套 CI 不需要仓库 secrets、真实 AI 服务、PostgreSQL 或 Redis；部署脚本测试使用替身命令，不部署应用。浏览器 E2E 和 Docker 镜像构建暂不纳入默认 CI。
+
 ## 质量检查
 
 改 Docker、Compose、Caddy、环境变量或启动脚本后至少跑：
