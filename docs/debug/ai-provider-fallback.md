@@ -7,7 +7,7 @@
 - Provider config resolver: `apps/api/src/modules/ai/provider-config.ts`
 - Signal caller: `apps/api/src/modules/signals/service.ts`
 - Error logging: `apps/api/src/shared/error-handler.ts`
-- Logging spec: `.trellis/spec/backend/logging-guidelines.md`
+- Backend engineering spec: `specs/engineering/backend.md`
 
 ## Routes
 

@@ -1,6 +1,5 @@
 .git
 .next
-.trellis
 .agents
 .codex
 node_modules
